@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="RestAPI">
+
+    <listeners>
+        <listener class-name="reporting.Setup"></listener>
+    </listeners>
+    <test name="RestAPI-PetsStore">
+        <classes>
+            <class name="tests.PetsTestNew" />
+        </classes>
+
+    </test>
+
+</suite>

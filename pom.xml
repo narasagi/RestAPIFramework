@@ -8,18 +8,34 @@
     <artifactId>RestAPIFramework</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.2.3</version>
+                <configuration>
+                    <suiteXmlFiles>
+                        <suiteXmlFile>testng.xml</suiteXmlFile>
+                    </suiteXmlFiles>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <restAssuredVersion>5.4.0</restAssuredVersion>
-        <testNGVersion>7.8.0</testNGVersion>
+        <testNGVersion>7.7.1</testNGVersion>
         <jacksonVersion>2.16.0</jacksonVersion>
         <gsonVersion>2.10.1</gsonVersion>
         <extentVersion>5.1.1</extentVersion>
-        <javafakerVersion>1.0.2</javafakerVersion>
+        <datafakerVersion>1.9.0</datafakerVersion>
         <lombokVersion>1.18.30</lombokVersion>
         <apacheCommonVersion>3.14.0</apacheCommonVersion>
+        <javersVersion>7.3.6</javersVersion>
     </properties>
 
     <dependencies>
@@ -49,9 +65,9 @@
             <version>${extentVersion}</version>
         </dependency>
         <dependency>
-            <groupId>com.github.javafaker</groupId>
-            <artifactId>javafaker</artifactId>
-            <version>${javafakerVersion}</version>
+            <groupId>net.datafaker</groupId>
+            <artifactId>datafaker</artifactId>
+            <version>${datafakerVersion}</version>
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
@@ -63,5 +79,11 @@
             <artifactId>commons-lang3</artifactId>
             <version>${apacheCommonVersion}</version>
         </dependency>
+        <dependency>
+            <groupId>org.javers</groupId>
+            <artifactId>javers-core</artifactId>
+            <version>${javersVersion}</version>
+        </dependency>
+
     </dependencies>
 </project>
