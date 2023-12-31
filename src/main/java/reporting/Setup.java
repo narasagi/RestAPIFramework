@@ -9,7 +9,7 @@ import org.testng.ITestResult;
 import java.util.Arrays;
 
 public class Setup implements ITestListener {
-    private static ExtentReports extentReports;
+    public static ExtentReports extentReports;
     public static ThreadLocal<ExtentTest> extentTestThreadLocal = new ThreadLocal<>();
     public void onStart(ITestContext context) {
         String fileName = ExtentReportsManager.getReportNameWithTimeStamp();
@@ -22,8 +22,10 @@ public class Setup implements ITestListener {
     }
 
     public void onTestStart(ITestResult result) {
-        ExtentTest extentTest = extentReports.createTest("Test Name:" + " " + result.getTestClass().getName() + " - " + result.getMethod().getMethodName());
-        extentTestThreadLocal.set(extentTest);
+        //Commenting below code for executing PetsTestScenarios.java class..After executing we can un comment below code
+        /*ExtentTest extentTest = extentReports.createTest("Test Name:" + " " + result.getTestClass().getName() + " - " + result.getMethod().getMethodName(),
+                result.getMethod().getDescription());
+        extentTestThreadLocal.set(extentTest);*/
     }
     public void onTestFailure(ITestResult result) {
         ExtentReportsManager.logFailDetails(result.getThrowable().getMessage());

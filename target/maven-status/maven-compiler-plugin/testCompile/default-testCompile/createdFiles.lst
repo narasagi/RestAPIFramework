@@ -1,9 +1,10 @@
-tests\Base.class
-tests\CreatePetsAPIs.class
 tests\PayLoads.class
-tests\pojos\Pets.class
 tests\PetsTestNew.class
 tests\PostTests.class
-tests\pojos\Pets$PetsBuilder.class
 tests\GetTests.class
 tests\pojos\Gender.class
+tests\Base.class
+tests\CreatePetsAPIs.class
+tests\pojos\Pets.class
+tests\pojos\Pets$PetsBuilder.class
+tests\ExcelDataPetsCreation.class
